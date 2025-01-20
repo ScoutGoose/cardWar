@@ -1,0 +1,45 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(3, 41, 3);
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #fff100;
+  cursor: pointer;
+  border: none;
+}
+
+button#new-deck {
+  align-self: flex-start;
+  padding: 5px;
+}
+
+button.draw {
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.card-container {
+  height: 150px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
