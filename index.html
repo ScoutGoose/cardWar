@@ -4,15 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card War</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <button id="new-deck">New Deck</button>
-    <div id="cards">
-      <div class="card-container"></div>
-      <div class="card-container"></div>
-    </div>
-    <button id="draw-cards" class="draw">Draw</button>
+    <section class="game-container">
+      <button id="new-deck" class="btn">New Deck</button>
+      <p class="remaining-cards">Cards Remaining: 0</p>
+      <div class="cards-container">
+        <p class="current-score" id="computer-score">Computer score: 0</p>
+        <div class="single-card" id="computer-card"></div>
+        <h2 class="current-results">War!</h2>
+        <div class="single-card" id="player-card"></div>
+        <p class="current-score" id="player-score">Player score: 0</p>
+      </div>
+      <button id="draw-cards" class="draw-btn btn" disabled>Draw</button>
+    </section>
     <script src="app.js"></script>
   </body>
 </html>

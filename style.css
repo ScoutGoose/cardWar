@@ -1,45 +1,89 @@
-html,
-body {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  background: rgb(3, 41, 3);
+  color: #fff;
+  font-family: "Exo 2", serif;
+}
+
+body {
+  background: #28712b;
   height: 100vh;
 }
 
-body {
+.game-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* max-width: 800px; */
 }
 
-button {
-  background-color: #fff100;
-  cursor: pointer;
-  border: none;
-}
-
-button#new-deck {
-  align-self: flex-start;
-  padding: 5px;
-}
-
-button.draw {
-  font-size: 1.2em;
-  padding: 5px;
-}
-
-#cards {
+.remaining-cards {
+  height: 5vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  text-transform: uppercase;
 }
 
-.card-container {
-  height: 150px;
-  width: 100px;
+.cards-container {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-card {
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 5%;
+  width: 11rem;
+  height: 15rem;
+}
+
+.btn {
+  background: #1a181b;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  width: 100%;
+  padding: 0.5rem;
+  transition: all linear 0.3s;
+  height: 5vh;
+  letter-spacing: 1px;
+}
+
+.draw-btn {
+  margin-top: auto;
+}
+
+.btn:hover:enabled {
+  cursor: pointer;
+  background: #fff;
+  color: #1a181b;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .game-container {
+    width: 800px;
+    max-height: 1200px;
+  }
 }
