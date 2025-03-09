@@ -31,7 +31,8 @@ function drawCards(deckId) {
       if (data.remaining === 0) {
         document.querySelector(".draw-btn").disabled = true;
       }
-    });
+    })
+    .catch((err) => console.log(err));
 }
 
 // COMPARE TWO CARDS
